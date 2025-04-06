@@ -1,0 +1,188 @@
+:root {
+    --bg-home: #F6D776;
+    --bg-menu: #A0D8B3;
+    --bg-new-arrivals: #FFB6B9;
+    --bg-about: #A0C4FF;
+    --bg-footer: #FFE066;
+    --bg-nav: #F67280;
+    --text-dark: #333;
+    --text-light: #fff;
+}
+
+/* ---------- Global Reset ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* ---------- Header ---------- */
+.logo {
+    text-align: center;
+    padding: 20px;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: var(--bg-nav);
+    padding: 10px 0;
+    border-radius: 0 0 30px 30px;
+}
+
+.nav-item {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    color: var(--bg-nav);
+    font-weight: bold;
+    border: 2px solid var(--bg-nav);
+    transition: all 0.3s ease;
+}
+
+.nav-item a {
+    color: var(--bg-nav);
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background-color: var(--bg-nav);
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.nav-item:hover a {
+    color: white;
+}
+
+/* ---------- Sections ---------- */
+.home {
+    background-color: var(--bg-home);
+    padding: 40px 20px;
+}
+
+.menu {
+    background-color: var(--bg-menu);
+    padding: 40px 20px;
+}
+
+.new-arrivals {
+    background-color: var(--bg-new-arrivals);
+    padding: 40px 20px;
+}
+
+.about {
+    background-color: var(--bg-about);
+    padding: 40px 20px;
+}
+
+.about h2, .menu h2, .home h2, .new-arrivals h2 {
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+/* ---------- Menu Table ---------- */
+.menu-t {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 12px 20px;
+    text-align: left;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* ---------- New Arrivals ---------- */
+.food-item {
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.food-item:hover {
+    transform: scale(1.05);
+}
+
+.food-item {
+    width: 300px;
+    padding: 15px;
+    background-color: #fdf2e9;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+}
+
+.food-item img {
+    width: 100%;
+    height: 200px; /* You can adjust this height */
+    object-fit: cover; /* This ensures the image fills the box without distortion */
+    border-radius: 10px;
+    display: block;
+    margin: 10px 0;
+}
+
+/* ---------- Reviews ---------- */
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.review-content {
+    background-color: #ffffffcc;
+    border: 2px solid black;
+    border-radius: 20px;
+    margin: 15px;
+    padding: 20px;
+    width: 45%;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: var(--bg-footer);
+    text-align: center;
+    padding: 20px;
+}
+
+footer img {
+    height: 40px;
+}
+
+/* ---------- Responsive Design ---------- */
+@media screen and (max-width: 768px) {
+    .food-item {
+        width: 90%;
+    }
+
+    .review-content {
+        width: 90%;
+    }
+}
+
+
+.nav-item.active {
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+.nav-item.active a {
+    color: white;
+}
